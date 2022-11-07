@@ -1,0 +1,1 @@
+from src.modules.message.api import blueprint as api
