@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src='js/jquery.svg3dtagcloud.min.js'></script>
+    </head>
+    <body>
+        <img id="logo" src="assets/images/logo.png" alt="logo">
+
+        <ul id="nav_bar">
+                <a routerLink="../"><li>HOME</li></a>
+                <a routerLink="../encrypt"><li>ENCRYPTING</li></a> 
+                <a routerLink="../stega"><li>STEGANOGRAPHY</li></a> 
+                <a href="#"><li>SECURITY ATTACK</li></a> 
+                <a href="#"><li>ABOUT US</li></a> 
+            </ul>
+        <div id="btns1">
+            <a routerLink="../"><button class="log_out">Log out</button></a>
+            <a routerLink="../check-message"><button class="inbox">check inbox</button></a>
+        </div>
+        <div id="cont_tab">
+                <table id="tab" border="1">
+                        <tr>
+                                <th class="col_username">From</th>
+                                <th class="col_message">Message</th>
+                                <th class="col_decrypt">Decrypt</th>
+                        </tr>
+                        <tr *ngFor="let msg1 of Message">
+                                <td class="col_username">{{msg1.owner}}</td>
+                                <td class="col_message">{{msg1.content}}</td>
+                                <td class="col_decrypt"><button (click)="Decrypt(msg1.id)">Decrypt</button></td>
+                        </tr>
+                </table>
+        </div>
+    </body>
+
+</html>

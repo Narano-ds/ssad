@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+    </head>
+    <body>
+        <img id="logo" src="assets/images/logo.png" alt="logo">
+        <img id="security" src="assets/images/Group 24.png" alt="security in the first place">
+        <img id="left" src="assets/images/Group 32.png" >
+        <img id="right" src="assets/images/Group 31.png" >
+        <img id="dright" src="assets/images/Group 36.png">
+        <img id="dleft" src="assets/images/Group 39.png" >
+        <div id="line"></div>
+        <div>
+            <p class="txt" id="p1">Are you ready to simulate the main concepts of <span id="high">cyber security</span> ?</p>
+            <p class="txt" id="p2">Get ready for <span id="high">the adventure</span> then ! </p>
+            <p class="txt" id="p3">Because you are in the right place</p>    
+        </div>
+        <ul id="nav_bar">
+            <a href=""><li>HOME</li></a>
+            <a routerLink="../encrypt"><li>ENCRYPTING</li></a> 
+            <a routerLink="../stega"><li>STEGANOGRAPHY</li></a> 
+            <a href="#"><li>SECURITY ATTACK</li></a> 
+            <a href="#"><li>ABOUT US</li></a> 
+        </ul>
+        <div id="btns">
+            <a routerLink="../sign-up"><button class="prim">Sign Up</button></a>
+            <a routerLink="../sign-in"><button class="sec">Log In</button></a>
+        </div>
+
+        <button class="sec" id="cfa">Let's GO !</button>
+        <p id="learn">Learn about :</p>
+       <!-- <div id="holder"></div>
+        <script src="main.js"></script>-->
+        <img id="act" src="assets/images/Group 35.png">
+        <div id="sphere">
+            <span class="Sphere"></span>
+        </div>
+        <div class="card">
+            <div class="cercle">
+                <img class="key" src="assets/images/casual-life-3d-yellow-padlock-with-key.png" alt="key">
+            </div>
+            <P class="titre">Enctypting</P>
+            <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do e...</p>
+            <p class="tri">see details</p>
+        </div>
+        <div class="card" id="c2">
+            <div class="cercle">
+                <img class="key" src="assets/images/casual-life-3d-yellow-padlock-with-key.png" alt="key">
+            </div>
+            <P class="titre">Enctypting</P>
+            <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do e...</p>
+            <p class="tri">see details</p>
+        </div>
+        <div class="card" id="c3">
+            <div class="cercle">
+                <img class="key" src="assets/images/casual-life-3d-yellow-padlock-with-key.png" alt="key">
+            </div>
+            <P class="titre">Enctypting</P>
+            <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do e...</p>
+            <p class="tri">see details</p>
+        </div>
+        <img id="usthb" src="assets/images/téléchargement__4_-removebg-preview.png" alt="USTHB">
+    </body>
+    <script src="https://cdn.jsdelivr.net/npm/TagCloud@2.2.0/dist/TagCloud.min.js"> </script>
+    <script>
+        const Texts = [
+            'security', 'steganography', 'Attaque',
+            'decalage', 'Affine', 'Miroire',
+            'PYTHON','security', 'steganography', 'Attaque',
+            'decalage', 'Affine', 'Miroire',
+        ];
+
+        var tagCloud = TagCloud('.Sphere', Texts, {
+
+            // Sphere radius in px
+            radius: 260,
+
+            // animation speed
+            // slow, normal, fast
+            maxSpeed: 'normal',
+            initSpeed: 'fast',
+
+            // Rolling direction [0 (top) , 90 (left), 135 (right-bottom)] 
+            direction: 400,
+
+            // interaction with mouse or not [Default true (decelerate to rolling init speed, and keep rolling with mouse).]
+            keep: true
+
+        });
+
+        // Giving color to each text in sphere
+        var color = '#FFF ';
+        document.querySelector('.Sphere').style.color = color;
+    </script>
+
+</html>

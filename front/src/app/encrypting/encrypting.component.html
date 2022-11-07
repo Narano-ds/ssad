@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src='js/jquery.svg3dtagcloud.min.js'></script>
+    </head>
+    <body>
+        <img id="logo" src="assets/images/logo.png" alt="logo">
+
+        <ul id="nav_bar">
+            <a routerLink="../"><li>HOME</li></a>
+            <a routerLink="../encrypt"><li>ENCRYPTING</li></a> 
+            <a routerLink="../stega"><li>STEGANOGRAPHY</li></a> 
+            <a href="#"><li>SECURITY ATTACK</li></a> 
+            <a href="#"><li>ABOUT US</li></a> 
+        </ul>
+        <div id="btns1">
+            <a routerLink="../"><button class="log_out">Log out</button></a>
+            <a routerLink="../check-message"><button class="inbox">check inbox</button></a>
+        </div>
+        <form [formGroup]="formData" id="container1" >
+            <div class="haja">
+                <label for="user">Username</label>
+                <input type="text" id="user" placeholder="username.."   formControlName="sent_to">
+            </div>
+            <div class="haja">
+                <label for="type" >ENCRYPTING Type:</label>
+                <select #method (change)="changeMethod(method.value)" name="types" id="type">
+                    <option value="">--Please choose an option--</option>
+                    <option value="Mirroire">Mirroire</option>
+                    <option value="Affine">Affine</option>
+                    <option value="Decalage">Decalage</option>
+                    <option value="Cesare">Cesare</option>
+                </select>
+            </div>
+            <div  id="row">
+                <div id="radio" *ngIf="message.type_cryptage=='Decalage'">
+                    <div>
+                        <input (change)="changeDirection('gauche')" type="radio" name="a" id="left1" value="left" checked>
+                        <label for="left1">Left</label>
+                    </div>
+                    <div>
+                        <input (change)="changeDirection('droite')" type="radio" name="a" id="right1" value="right">
+                        <label for="right">Right</label>
+                    </div>    
+                </div>
+                <div   *ngIf="message.type_cryptage!='Mirroire'"class="haja2" >
+                    <label for="step" >Steps</label>
+                    <input formControlName="para1" type="Number" id="step" placeholder="0">
+                </div>
+                <div   *ngIf="message.type_cryptage=='Affine'"class="haja2" >
+                    <label for="step" >Steps</label>
+                    <input formControlName="para2" type="Number" id="step" placeholder="0">
+                </div>
+
+            </div>
+       
+            <div id="msg">
+                <label for="story">Tell us your Message:</label>
+
+                <textarea formControlName="content"id="mesg" name="mesg"
+                        rows="5" cols="33" placeholder="Type your message here..">
+                
+                </textarea>
+
+            </div>
+            <input type="submit" value="Send" id="send" routerLink="../encrypt" (click)="send_request()">
+        </form>
+        <img src="assets/images/Group 42.png" id="hi">
+        <img id="usthb3" src="assets/images/téléchargement__4_-removebg-preview.png" alt="USTHB">
+    </body>
+
+</html>

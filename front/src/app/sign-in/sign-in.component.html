@@ -1,0 +1,38 @@
+<html lang="en">
+    <head>
+        
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <title>Document</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src='js/jquery.svg3dtagcloud.min.js'></script>
+    </head>
+    <body>
+        <img id="logo" src="assets/images/logo.png" alt="logo">
+        
+      
+    
+        <img id="usthb2" src="assets/images/téléchargement__4_-removebg-preview.png" alt="USTHB">
+        <img id="couverture" src="assets/images/Group 41.png" >
+        <form [formGroup]="formData" action="">
+            <div class="rub">
+                <label for="username">Username</label>
+                <input id="username" formControlName="username" name="username" type="text">
+            </div>
+            <div class="rub">
+                <label for="password">Password</label>
+                <input id="password" formControlName="password_hash" type="password">
+                
+            </div>
+            <div class="submit">
+                <input type="submit" value="Connect" id="submit" routerLink="../encrypt" (click)="Connect()">
+                <p >You don't have an account ? <a href="# ">Click here</a></p>
+            </div>
+        </form>
+    </body>
+    
+</html>
